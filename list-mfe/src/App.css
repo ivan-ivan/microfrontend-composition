@@ -1,0 +1,20 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.list-wrapper {
+  flex-grow: 1;
+  align-self: stretch;
+  background: #ff9999;
+  padding: 20px;
+  margin: 0;
+}
+
+li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 35px;
+}

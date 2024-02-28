@@ -1,0 +1,6 @@
+.mfe-wrapper {
+    display: flex;
+    overflow: auto;
+    height: 50%;
+    width: 50vw;
+}
