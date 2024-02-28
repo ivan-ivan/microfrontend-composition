@@ -2,16 +2,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './MicroFrontendWrapper.css';
-
-const woodTypes = [
-  'Oak',
-  'Walnut',
-  'Pine',
-  'Birch',
-  'Redwood',
-  'Beech',
-  'Mahogany'
-];
+import { woodTypes } from '../constants';
 
 export default function MicroFrontendWrapper({ name, url }) {
   useEffect(() => {
