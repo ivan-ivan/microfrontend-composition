@@ -1,9 +1,9 @@
 # microfrontend-composition
-### Composition by lazy loading the micro frontends bundled using Javascript inside a container app.
-### This is a web application consisting of several sub-applications that are loaded into the main one at runtime
-### Each micro frontend application placed in a separate project and have its own package.json & dependencies
 
-#### Please use node version 18.X.X for seamless working fo the application
+### This is a web application consisting of several sub-applications that are loaded into the main one at runtime
+### Each micro frontend application is placed in a separate project and has its package.json & dependencies
+
+#### Please use node version 18.X.X for seamless operation of the application
 
 ## To run container app
 
