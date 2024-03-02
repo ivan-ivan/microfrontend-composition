@@ -3,7 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/main.jsx",
+  entry: "./src/main.tsx",
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: "[name].js",
@@ -18,13 +18,20 @@ module.exports = {
         },
       },
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({

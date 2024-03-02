@@ -1,12 +1,13 @@
-export const mfeConfiguration = [
+import { mfeEntity } from './types';
+
+export const MFE_CONFIGURATION: mfeEntity[] = [
     {
         id: 'grid',
         url: 'http://localhost:5001'
     },
     {
         id: 'text',
-        url: 'http://localhost:5002',
-        test: 'mountTextMfe',
+        url: 'http://localhost:5002'
     },
     {
         id: 'image',
@@ -18,7 +19,7 @@ export const mfeConfiguration = [
     },
 ];
 
-export const woodTypes = [
+export const WOOD_TYPES: string[] = [
     'Oak',
     'Walnut',
     'Pine',

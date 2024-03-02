@@ -1,17 +1,21 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+import * as React from 'react';
 import { useEffect } from 'react';
 import './MicroFrontendWrapper.css';
-import { woodTypes } from '../constants';
+import { WOOD_TYPES } from '../constants';
 
-export default function MicroFrontendWrapper({ name, url }) {
+type MicroFrontendWrapperProps = {
+  name: string;
+  url: string;
+};
+
+const MicroFrontendWrapper: React.FC<MicroFrontendWrapperProps> = ({ name, url }) => {
   useEffect(() => {
     const renderMicrofrontend = () => {
       const capitalizeFirstLetter = (string) => (string.charAt(0).toUpperCase() + string.slice(1));
       const mfeType = `mount${capitalizeFirstLetter(name)}Mfe`;
 
       if (mfeType === 'mountListMfe') {
-        window[mfeType](`${name}-container`, woodTypes);
+        window[mfeType](`${name}-container`, WOOD_TYPES);
       } else {
         window[mfeType](`${name}-container`);
       }
@@ -33,4 +37,6 @@ export default function MicroFrontendWrapper({ name, url }) {
   return (
     <section className="mfe-wrapper" id={`${name}-container`} />
   )
-}
+};
+
+export default MicroFrontendWrapper;

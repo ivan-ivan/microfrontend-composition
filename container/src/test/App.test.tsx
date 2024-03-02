@@ -1,7 +1,8 @@
+import * as React from 'react';
 import { render } from '@testing-library/react';
-import React from 'react';
-import App from '../App.jsx';
-import { mfeConfiguration } from '../constants';
+import '@testing-library/jest-dom';
+import App from '../App';
+import { MFE_CONFIGURATION } from '../constants';
 
 describe('App tests', () => {
     it('should contain container element', () => {
@@ -15,6 +16,6 @@ describe('App tests', () => {
         const result = render(<App />);
         const container = result.container.querySelector('#container');
 
-        expect(container.children.length).toBe(mfeConfiguration.length);
+        expect(container.children.length).toBe(MFE_CONFIGURATION.length);
     });
 });

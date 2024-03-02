@@ -1,13 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import './App.css';
 import MicroFrontendWrapper from './components/MicroFrontendWrapper';
-import { mfeConfiguration } from './constants';
+import { MFE_CONFIGURATION } from './constants';
+import { mfeEntity } from './types';
 
 function App() {
   return (
     <main id="container">
       {
-        mfeConfiguration.map((mfe) => {
+        MFE_CONFIGURATION.map((mfe: mfeEntity) => {
           return <MicroFrontendWrapper key={mfe.id} name={mfe.id} url={mfe.url} />
         })
       }

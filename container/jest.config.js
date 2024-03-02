@@ -4,10 +4,10 @@ module.exports = {
     collectCoverageFrom: ['src/**/*.{js,jsx}'],
     coverageDirectory: 'coverage',
     testEnvironment: 'jsdom',
-    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
     testPathIgnorePatterns: ['<rootDir>/node_modules/'],
     transform: {
-        '^.+\\.(js|jsx)$': 'babel-jest',
+        '^.+\\.(ts|tsx)$': 'babel-jest',
         '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css'
     }
 }
