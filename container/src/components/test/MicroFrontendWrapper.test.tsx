@@ -12,16 +12,16 @@ describe('MicroFrontendWrapper tests', () => {
     });
 
     it('loads and renders microfrontend script', async () => {
-        window.mountTestMfe = jest.fn();
+        window['mountTestMfe'] = jest.fn();
         render(<MicroFrontendWrapper name="test" url="http://localhost:5001" />);
 
         await waitFor(() => {
             const script = document.querySelector('script');
             fireEvent.load(script);
 
-            expect(window.mountTestMfe).toHaveBeenCalledTimes(1);
+            expect(window['mountTestMfe']).toHaveBeenCalledTimes(1);
         });
 
-        delete window.mountTestMfe;
+        delete window['mountTestMfe'];
     });
 });
