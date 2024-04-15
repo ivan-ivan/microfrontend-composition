@@ -8,9 +8,9 @@ function App() {
   return (
     <main id="container">
       {
-        MFE_CONFIGURATION.map((mfe: mfeEntity) => {
-          return <MicroFrontendWrapper key={mfe.id} name={mfe.id} url={mfe.url} />
-        })
+        MFE_CONFIGURATION.map((mfe: mfeEntity) => (
+            <MicroFrontendWrapper key={mfe.id} name={mfe.id} url={mfe.url} />)
+        )
       }
     </main>
   )
