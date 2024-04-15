@@ -10,6 +10,9 @@ function App() {
       .then((data) => data.json())
       .then((data) => {
         setUsers(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
       });
   }, []);
 
